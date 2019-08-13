@@ -7,7 +7,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-jwt</name>
 	<description>spring-boot-jwt</description>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -43,61 +42,63 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.boot</groupId> -->
+<!-- 			<artifactId>spring-boot-starter-tomcat</artifactId> -->
+<!-- 			<scope>provided</scope> -->
+<!-- 		</dependency> -->
 	</dependencies>
 
 	<build>
-		<finalName>${project.artifactId}</finalName>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-				<excludes>
-					<exclude>**/*.jks</exclude>
-				</excludes>
-			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>false</filtering>
-				<includes>
-					<include>**/*.jks</include>
-				</includes>
-			</resource>
-		</resources>
+<!-- 		<finalName>${project.artifactId}</finalName> -->
+<!-- 		<resources> -->
+<!-- 			<resource> -->
+<!-- 				<directory>src/main/resources</directory> -->
+<!-- 				<filtering>true</filtering> -->
+<!-- 				<excludes> -->
+<!-- 					<exclude>**/*.jks</exclude> -->
+<!-- 				</excludes> -->
+<!-- 			</resource> -->
+<!-- 			<resource> -->
+<!-- 				<directory>src/main/resources</directory> -->
+<!-- 				<filtering>false</filtering> -->
+<!-- 				<includes> -->
+<!-- 					<include>**/*.jks</include> -->
+<!-- 				</includes> -->
+<!-- 			</resource> -->
+<!-- 		</resources> -->
 		<plugins>
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.tomcat.maven</groupId> -->
+<!-- 				<artifactId>tomcat7-maven-plugin</artifactId> -->
+<!-- 				<version>2.0</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>tomcat-run</id> -->
+<!-- 						<goals> -->
+<!-- 							<goal>exec-war-only</goal> -->
+<!-- 						</goals> -->
+<!-- 						<phase>package</phase> -->
+<!-- 						<configuration> -->
+<!-- 							<path>/</path> -->
+<!-- 							<enableNaming>false</enableNaming> -->
+<!-- 							<finalName>spring-boot-jwt-webapp.war</finalName> -->
+<!-- 							<charset>utf-8</charset> -->
+<!-- 						</configuration> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
 			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.0</version>
-				<executions>
-					<execution>
-						<id>tomcat-run</id>
-						<goals>
-							<goal>exec-war-only</goal>
-						</goals>
-						<phase>package</phase>
-						<configuration>
-							<path>/</path>
-							<enableNaming>false</enableNaming>
-							<finalName>spring-boot-jwt-webapp.war</finalName>
-							<charset>utf-8</charset>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-<!-- 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<verbose>true</verbose>
+					<fork>true</fork>
+					<executable>K:\Java\openjdk-8u222-b10\bin\javac</executable>
+					<compilerVersion>8</compilerVersion>
 				</configuration>
-			</plugin> -->
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
